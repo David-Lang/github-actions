@@ -4,10 +4,6 @@ terraform {
       source  = "cyberark/conjur"
       version = "0.6.3"
     }
-#    aws = {
-#      source  = "hashicorp/aws"
-#      version = "~> 5.0"
-#    }
   }
 }
 
@@ -17,7 +13,7 @@ provider "conjur" {
   login = var.login
   api_key = var.api_key
   #ssl_cert_path = var.ssl_cert_path
-  ssl_cert = var.ssl_cert
+  #ssl_cert = var.ssl_cert
 }
 
 data "conjur_secret" "secret_1" {
